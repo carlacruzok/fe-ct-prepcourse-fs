@@ -6,6 +6,9 @@ function sonIguales(x, y) {
    // De lo contrario, retorna false.
    // Tu código:
    return x===y
+   // otra forma
+   // if (x === y) return true
+   // else return false
 }
 var resultado = sonIguales(7,8)
 console.log(resultado)
@@ -23,9 +26,11 @@ function menosQueNoventa(num) {
    // Retorna true si el argumento "num" es menor que noventa.
    // De lo contrario, retorna false.
    // Tu código:
+   //otra forma
    // if (num < 90) return true;
    // else  return false;
    return num < 90
+  
 }
 
 function mayorQueCincuenta(num) {

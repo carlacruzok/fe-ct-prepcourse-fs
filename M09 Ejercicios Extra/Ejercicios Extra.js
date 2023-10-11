@@ -61,16 +61,27 @@ function asAmirror(frase) {
    // Tu código:
    // para resolver de otro modo
    // resolver con metodo split, luego reverse de los arrays y el metodo join
-   var frasePalabra = frase.split(' ') // separa la frase en palabras en un array, la condicion es el espacio para separar
-   var nuevaPalabra = [];
-   for (var i= 0; i< frasePalabra.length; i++){
-      var palabraInvertida = "";
-      for (var j = frasePalabra[i].length - 1; j >= 0; j--){
-         palabraInvertida += frasePalabra[i][j];
-      }
-      nuevaPalabra.push(palabraInvertida);
-     }
-     return nuevaPalabra.join(' ');
+   // split() un string de toda la frase en un arreglo
+   // split('') cada letra en un arreglo
+   // split(' ') la frase convertida en arreglo por cada espacio que encuentre
+
+   const seppalabra = frase.split(' ')
+   // console.log(seppalabra)
+   for (var i = 0; i < seppalabra.length; i++){
+      seppalabra[i] = seppalabra[i].split('').reverse().join('')
+   } //console.log(seppalabras.join(''))
+   return seppalabra.join(' ')
+
+   // var frasePalabra = frase.split(' ') // separa la frase en palabras en un array, la condicion es el espacio para separar
+   // var nuevaPalabra = [];
+   // for (var i= 0; i< frasePalabra.length; i++){
+   //    var palabraInvertida = "";
+   //    for (var j = frasePalabra[i].length - 1; j >= 0; j--){
+   //       palabraInvertida += frasePalabra[i][j];
+   //    }
+   //    nuevaPalabra.push(palabraInvertida);
+   //   }
+   //   return nuevaPalabra.join(' ');
  }
 
 function capicua(numero) {

@@ -17,6 +17,12 @@ function mayuscula(nombre) {
    //console.log(nombre);
    return nombre
 }
+//otra forma-------
+// var letra=nombre.charAt(0).toUpperCase();
+// const resto= nombre.slice(1) // el resto de la palabra o guarda en resto
+//var completo= letra + resto
+//return completo
+
 //mayuscula('carla')
 
 function invocarCallback(cb) {
@@ -47,6 +53,7 @@ var resultado = arrayOfNumbers.reduce(function(suma, num){
 }, 0)
    cb(resultado);
 }
+// tambien se puede hacer con for
 
 function forEach(array, cb) {
    // Recibes un arreglo y un callback.

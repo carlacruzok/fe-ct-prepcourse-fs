@@ -73,6 +73,9 @@ function dePalabrasAFrase(palabras) {
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
    return palabras.join(' ')
+   //otra forma
+   // var string = palabras.join(' ')
+   // return string
  }
 
 function arrayContiene(array, elemento) {
@@ -98,6 +101,7 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+
    //otra opcion
    /*var suma = 0;
    for (var i=0; i < arrayOfNums.length; i++){
@@ -106,6 +110,13 @@ function agregarNumeros(arrayOfNums) {
    return arrayOfNums.reduce(function(suma, elemento) { // es lo mismo que (suma, elemento) => {}
       return suma + elemento // suma= suma + elemento
 })
+
+// con metodo MAP
+// var sum = 0
+// arrayOfNums.map(num => {
+//    sum = sum +num
+// })
+// return sum
 }
 
 function promedioResultadosTest(resultadosTest) {
@@ -220,6 +231,10 @@ for (let i=1; i<array.length; i++){
 } return true
 
 // hacer con metodo EVERY()
+// var numeroCualquiera = array[0]
+// return array.every(function (elem){
+//    return elem === numeroCualquiera
+// })
 
 // con foreach
 // var numero = array[0]

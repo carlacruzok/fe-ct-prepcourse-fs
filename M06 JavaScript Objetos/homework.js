@@ -76,7 +76,7 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-if (objetoUsuario.email) return true;
+if (objetoUsuario.email) return true; //existe la propiedad email y tiene un valor definido en ella?
 else return false;
 }
 
