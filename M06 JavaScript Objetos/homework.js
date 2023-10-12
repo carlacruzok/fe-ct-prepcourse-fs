@@ -158,10 +158,10 @@ function sumarLikesDeUsuario(objetoUsuario) {
    } return suma;
 
    //con metodo REDUCE, aqui le pasamos 0 como acumulador para que se inicialice, porque trabajamos con objetos
-  var suma = objetoUsuario.posts.reduce(function(acumulador, post){
-      acumulador = acumulador + post.likes
-   }, 0)
-   return acumulador
+//   var suma = objetoUsuario.posts.reduce(function(acumulador, post){
+//       acumulador = acumulador + post.likes
+//    }, 0)
+//    return acumulador
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
