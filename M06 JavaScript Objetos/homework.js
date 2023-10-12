@@ -31,6 +31,15 @@ function nuevoUsuario(nombre, email, password) {
     return newuser
 } // los valores de las propiedad van sin comillas porque las voy a ingresar cuando invoque a la funcion
 
+//objetos literales-> 2015 cuando la propiedad coincide con el nombre del parametro queda
+// var newuser = {
+//    nombre,
+//    email,
+//    password,
+
+
+
+
 function agregarPropiedad(objeto, propiedad) {
    // Recibirás un objeto por parámetro.
    // Debes agregarle una propiedad con el nombre recibido por parámetro.
@@ -98,7 +107,7 @@ function verificarPassword(objetoUsuario, password) {
    if (objetoUsuario.password === password) return true
    else return false;
 
-   // otra opcion
+   // otra opcion -> es lo mismo que usar un IF
    //return objetoUsuario.password === password;
 }
 
@@ -129,6 +138,12 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    for(var i = 0; i < objetoMuchosUsuarios.length ; i++) {
       objetoMuchosUsuarios[i].esPremium = true;
    } return objetoMuchosUsuarios;
+
+   // otra forma
+   // objetoMuchosUsuarios.foreach(function (usuario){
+   //    usuario.esPremium = true
+   // })
+   // return objetoMuchosUsuarios
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
@@ -141,6 +156,12 @@ function sumarLikesDeUsuario(objetoUsuario) {
    for (var i = 0 ; i < objetoUsuario.posts.length; i++){
       suma = suma + objetoUsuario.posts[i].likes;
    } return suma;
+
+   //con metodo REDUCE, aqui le pasamos 0 como acumulador para que se inicialice, porque trabajamos con objetos
+  var suma = objetoUsuario.posts.reduce(function(acumulador, post){
+      acumulador = acumulador + post.likes
+   }, 0)
+   return acumulador
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
